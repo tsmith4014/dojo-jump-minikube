@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  dojo-app:
+    build: ./dojo-jump 
+    image: tsmith4014/dojo-app
+    ports:
+      - "${PORT_BACKEND}:80"
+    environment:
+      PORT_BACKEND: ${PORT_BACKEND}
